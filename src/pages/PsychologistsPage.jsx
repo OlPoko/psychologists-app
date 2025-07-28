@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { db } from "../firebase/firebase";
 import { ref, onValue } from "firebase/database";
 import PsychologistCard from "../components/PsychologistCard/PsychologistCard";
+import styles from "./PsychologistsPage.module.css";
 
 const PsychologistsPage = () => {
   const [allPsychologists, setAllPsychologists] = useState([]);
@@ -25,18 +26,19 @@ const PsychologistsPage = () => {
   };
 
   return (
-    <div>
-      <h1>Our Psychologists</h1>
-      <ul>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Our Psychologists</h1>
+      <ul className={styles.list}>
         {visiblePsychologists.map((p) => (
           <PsychologistCard key={p.id} data={p} />
         ))}
       </ul>
       {visibleCount < allPsychologists.length && (
-        <button onClick={handleLoadMore}>Load more</button>
+        <button className={styles.loadMoreBtn} onClick={handleLoadMore}>
+          Load more
+        </button>
       )}
     </div>
   );
 };
-
 export default PsychologistsPage;

@@ -3,16 +3,15 @@ import { getAuth } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDZipDCk2Uy7xBIx9xt7UuDbtmINR6Sw4A",
-  authDomain: "psychologists-app-48ff8.firebaseapp.com",
-  databaseURL:
-    "https://psychologists-app-48ff8-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "psychologists-app-48ff8",
-  storageBucket: "psychologists-app-48ff8.firebasestorage.app",
-  messagingSenderId: "917345246577",
-  appId: "1:917345246577:web:419d4d56e838b6e4f7aad0",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
-
+console.log("Firebase API key:", import.meta.env.VITE_FIREBASE_API_KEY);
 const app =
   getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0];
 

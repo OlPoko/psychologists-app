@@ -10,7 +10,7 @@ const Hero = () => {
   const handleClick = () => {
     navigate("/psychologists");
   };
-
+  console.log(import.meta.env.VITE_FIREBASE_API_KEY);
   return (
     <section className={styles.hero}>
       <div className={styles.left}>

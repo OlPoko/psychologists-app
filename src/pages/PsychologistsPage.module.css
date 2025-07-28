@@ -1,0 +1,53 @@
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+}
+
+.loadMoreBtn {
+  display: block;
+  margin: 0 auto;
+  padding: 14px 48px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background-color: #54be96;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.loadMoreBtn:hover {
+  background-color: #3ea57e;
+}
+
+/* Адаптивність */
+@media (max-width: 480px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .loadMoreBtn {
+    width: 100%;
+    padding: 14px 0;
+  }
+}
