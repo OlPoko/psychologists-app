@@ -1,0 +1,89 @@
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #157f59;
+  text-decoration: none;
+}
+
+.logo span {
+  color: #102a43;
+}
+
+.nav,
+.auth {
+  display: flex;
+  gap: 20px;
+}
+
+.link {
+  text-decoration: none;
+  color: #334e68;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #157f59;
+}
+.loginButton {
+  width: 124px;
+  height: 48px;
+  border-radius: 30px;
+  border: 1px solid #1e293b; /* або інший колір з макету */
+  background-color: transparent;
+  color: #1e293b;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.loginButton:hover {
+  background-color: #1e293b;
+  color: #fff;
+}
+.registrationButton {
+  width: 171px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #54be96;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 14px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.registrationButton:hover {
+  background-color: #334155; /* трохи світліший на hover */
+}

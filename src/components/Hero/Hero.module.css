@@ -1,0 +1,141 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 24px;
+  gap: 125px;
+  flex-wrap: wrap;
+}
+
+.left {
+  flex: 1;
+  min-width: 320px;
+  max-width: 600px;
+}
+
+.title {
+  font-family: Inter;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 80px;
+  line-height: 82px;
+  letter-spacing: -2%;
+
+  color: #1e293b;
+  margin-bottom: 24px;
+}
+
+.title span {
+  color: #54be96;
+}
+
+.subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #475569;
+  margin-bottom: 32px;
+}
+
+.cta {
+  width: 236px;
+  height: 60px;
+  border-radius: 30px;
+  padding: 18px 50px;
+  background-color: #54be96;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.cta:hover {
+  background-color: #3ea57e;
+}
+.right {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+}
+
+/* Замість абсолютного позиціювання */
+.layoutBlock {
+  position: absolute;
+  top: 82%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  width: 311px;
+  height: 118px;
+  background-color: #54be96;
+  border-radius: 20px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  padding: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+/* 🟩 Квадрати зі SVG */
+.squareOne,
+.squareTwo {
+  position: absolute;
+  background-color: #54be96;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.squareOne {
+  position: absolute;
+  top: 38%;
+  left: -6%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: #4535af;
+  transform: rotate(-15deg);
+}
+
+.squareTwo {
+  position: absolute;
+  top: 15%;
+  left: 97%;
+  width: 48px;
+  height: 48px;
+  background-color: #fbc75e;
+  transform: rotate(15deg);
+}
+
+.squareOne img,
+.squareTwo img {
+  width: 24px;
+  height: 24px;
+}
+@media (max-width: 768px) {
+  .layoutBlock {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 311px;
+    height: auto;
+    margin-top: 24px;
+  }
+}
