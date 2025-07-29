@@ -26,19 +26,39 @@ const PsychologistsPage = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Our Psychologists</h1>
-      <ul className={styles.list}>
-        {visiblePsychologists.map((p) => (
-          <PsychologistCard key={p.id} data={p} />
-        ))}
-      </ul>
-      {visibleCount < allPsychologists.length && (
-        <button className={styles.loadMoreBtn} onClick={handleLoadMore}>
-          Load more
-        </button>
-      )}
-    </div>
+    <section className={styles.wrapper}>
+      <aside className={styles.sidebar}>
+        <label className={styles.label}>Filters</label>
+        <select className={styles.select}>
+          <option>A to Z</option>
+          <option>Z to A</option>
+          <option>Less than 100$</option>
+          <option>Greater than 100$</option>
+          <option>Popular</option>
+          <option>Not popular</option>
+          <option>Show all</option>
+        </select>
+      </aside>
+
+      <div className={styles.content}>
+        <h1 className={styles.title}>Our Psychologists</h1>
+
+        <ul className={styles.cardList}>
+          {visiblePsychologists.map((p) => (
+            <li key={p.id}>
+              <PsychologistCard data={p} />
+            </li>
+          ))}
+        </ul>
+
+        {visibleCount < allPsychologists.length && (
+          <button className={styles.loadMore} onClick={handleLoadMore}>
+            Load more
+          </button>
+        )}
+      </div>
+    </section>
   );
 };
+
 export default PsychologistsPage;
