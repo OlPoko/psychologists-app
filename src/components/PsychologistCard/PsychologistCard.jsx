@@ -23,7 +23,10 @@ const PsychologistCard = ({ data }) => {
   return (
     <div className={styles.card}>
       <div className={styles.header}>
-        <img src={avatar_url} alt={name} className={styles.avatar} />
+        <div className={styles.avatarWrapper}>
+          <div className={styles.avatarStatus}></div>
+          <img src={avatar_url} alt={name} className={styles.avatarImage} />
+        </div>
 
         <div className={styles.mainInfo}>
           <p className={styles.role}>Psychologist</p>
@@ -55,7 +58,7 @@ const PsychologistCard = ({ data }) => {
         <div className={styles.ratingBox}>
           <span className={styles.rating}>
             <FaStar className={styles.star} />
-            <span className={styles.rating}>Rating </span>
+            <span className={styles.rating}>Rating</span>
             {rating}
           </span>
 
